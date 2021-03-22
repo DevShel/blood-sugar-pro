@@ -12,10 +12,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Blood Pressure Pro"
+        android:text="Blood Sugar Pro"
         android:textColor="#fff"
         android:textStyle="bold"
         android:textSize="30sp"
+        android:layout_marginTop="12dp"
         />
     <GridLayout
         android:layout_width="match_parent"
@@ -23,9 +24,11 @@
         android:layout_below="@id/title_view"
         android:rowCount="3"
         android:columnCount="2"
+        android:layout_margin="20dp"
         >
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/profile_card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
@@ -50,7 +53,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="HOME"
+                    android:text="Your Profile"
                     android:textStyle="bold"
                     android:layout_gravity="center_horizontal"
                     android:textAlignment="center"/>
@@ -60,6 +63,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/data_entry_card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
@@ -80,11 +84,11 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/language"/>
+                    android:src="@drawable/edit_image"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="LANGUAGE"
+                    android:text="Data Entry"
                     android:textStyle="bold"
                     android:layout_gravity="center_horizontal"
                     android:textAlignment="center"/>
@@ -94,7 +98,8 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
+            android:id="@+id/monitor_card"
+            android:layout_width="@dimen/cardview_compat_inset_shadow"
             android:layout_height="wrap_content"
             android:layout_row="1"
             android:layout_column="0"
@@ -114,11 +119,11 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/widgets"/>
+                    android:src="@drawable/analyze_image"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="WIDGETS"
+                    android:text="Blood Sugar \nFAQs"
                     android:textStyle="bold"
                     android:layout_gravity="center_horizontal"
                     android:textAlignment="center"/>
@@ -128,6 +133,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/faqs_card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
@@ -152,7 +158,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CHAT"
+                    android:text="App \nFAQs"
                     android:textStyle="bold"
                     android:layout_gravity="center_horizontal"
                     android:textAlignment="center"/>
