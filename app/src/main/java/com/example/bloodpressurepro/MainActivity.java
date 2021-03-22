@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         card1 = (CardView) findViewById(R.id.profile_card);
-        card2 = (CardView) findViewById(R.id.data_entry_card);
-        card3 = (CardView) findViewById(R.id.monitor_card);
+        card2 = (CardView) findViewById(R.id.monitor_card);
+        card3 = (CardView) findViewById(R.id.blood_sugar_faq_card);
         card4 = (CardView) findViewById(R.id.faqs_card);
 
         card1.setOnClickListener(this);
@@ -38,13 +38,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(i);
                 break;
 
-            case R.id.data_entry_card :
-                i = new Intent(this,DataEntry.class);
+            case R.id.monitor_card :
+                i = new Intent(this, Monitor.class);
                 startActivity(i);
                 break;
 
-            case R.id.monitor_card :
-                i = new Intent(this,Monitor.class);
+            case R.id.blood_sugar_faq_card :
+                i = new Intent(this, GlucoseFAQs.class);
                 startActivity(i);
                 break;
             case R.id.faqs_card :

@@ -10,8 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BloodPressurePro">
         <activity android:name=".FAQs"></activity>
+        <activity android:name=".GlucoseFAQs" />
         <activity android:name=".Monitor" />
-        <activity android:name=".DataEntry" />
         <activity android:name=".Profile" />
         <activity android:name=".MainActivity">
             <intent-filter>

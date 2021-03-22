@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class DataEntry extends AppCompatActivity {
+public class GlucoseFAQs extends AppCompatActivity {
+
+    public int i;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_data_entry);
+        setContentView(R.layout.blood_sugar_faqs);
     }
 }
