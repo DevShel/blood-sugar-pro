@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "Blood Sugar Pro"
+rootProject.name = "blood_sugar_pro"

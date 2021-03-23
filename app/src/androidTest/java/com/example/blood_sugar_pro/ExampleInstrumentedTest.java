@@ -1,4 +1,4 @@
-package com.example.bloodpressurepro;
+package com.example.blood_sugar_pro;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.bloodpressurepro", appContext.getPackageName());
+        assertEquals("com.example.blood_sugar_pro", appContext.getPackageName());
     }
 }

@@ -1,4 +1,4 @@
-package com.example.bloodpressurepro;
+package com.example.blood_sugar_pro;
 
 import org.junit.Test;
 

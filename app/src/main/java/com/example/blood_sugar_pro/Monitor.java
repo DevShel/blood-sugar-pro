@@ -1,4 +1,4 @@
-package com.example.bloodpressurepro;
+package com.example.blood_sugar_pro;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,26 +14,32 @@ import android.widget.Toast;
 
 public class Monitor extends AppCompatActivity {
 
-    public static final String SHARED_PREFERENCES = "sharedPreferences";
+
+    //setting default value for text string
     public String text = " ";
-    public TextView ageDisplay;
+
+    //creating TextView that displays the responses to the inputted age and BSL
     public TextView displayWhetherHealthy;
+
+    //creating each switch variable
     public Switch scenarioSwitch1;
     public Switch scenarioSwitch2;
     public Switch scenarioSwitch3;
     public Switch scenarioSwitch4;
 
+    //getAge method is used to set the age string to the shared preference value of "age"
     public void getAge(){
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
+        //accessing shared preferences file
+        SharedPreferences sharedPreferences = getSharedPreferences("sharedPreferences", MODE_PRIVATE);
+        //sets local age variable to the shared preferences value for age
         String age = sharedPreferences.getString("age","None");
-        Toast.makeText(this, "Age: "+ age,Toast.LENGTH_SHORT).show();
-
     }
 
     public void getBSL(){
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
+        //accessing shared preferences file
+        SharedPreferences sharedPreferences = getSharedPreferences("sharedPreferences", MODE_PRIVATE);
+        //sets local BSL variable to the shared preferences value for BSL
         String BSL = sharedPreferences.getString("BSL", "None");
-        Toast.makeText(this, "Blood Sugar Level: "+ BSL,Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -41,30 +47,37 @@ public class Monitor extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.health_monitor);
 
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("sharedPreferences", MODE_PRIVATE);
         String age = sharedPreferences.getString("age","None");
         String BSL = sharedPreferences.getString("BSL","None");
+
+        //connects displayWhetherHealthy variable to corresponding XML ID
         displayWhetherHealthy = (TextView) findViewById(R.id.displayStatus);
 
+        //connects scenarioSwitch[num] variable to corresponding XML IDs
         scenarioSwitch1 = (Switch) findViewById(R.id.scenario1);
         scenarioSwitch2 = (Switch) findViewById(R.id.scenario2);
         scenarioSwitch3 = (Switch) findViewById(R.id.scenario3);
         scenarioSwitch4 = (Switch) findViewById(R.id.scenario4);
 
+        //establishing switchState boolean variables based on whether or not switches are checked
         Boolean switchState1 = scenarioSwitch1.isChecked();
         Boolean switchState2 = scenarioSwitch2.isChecked();
         Boolean switchState3 = scenarioSwitch3.isChecked();
         Boolean switchState4 = scenarioSwitch4.isChecked();
 
-
+        //user inputs of age and BSL are now parsed into integers for use in if statements
         int numAge = Integer.parseInt(age);
         int numBSL = Integer.parseInt(BSL);
 
         getAge();
         getBSL();
+
         //SWITCH ONE
+        //ACTIVITY: Fasting
         scenarioSwitch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
+            //suppressing highlighted message within androidstudio
             @SuppressLint("SetTextI18n")
             @Override
             // All blood glucose levels during fasting
@@ -75,13 +88,18 @@ public class Monitor extends AppCompatActivity {
                     scenarioSwitch3.setChecked(false);
                     scenarioSwitch4.setChecked(false);
 
+                    //logic using chart from https://www.singlecare.com/blog/normal-blood-glucose-levels/
+                    //this if tree format is repeated for each of the four activities
                     if (numAge<6){
+                        //if they're within the health range for their age then it says they are healthy
                         if (numBSL<=180 & numBSL>=80){
                             displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood sugar between 80-180 mg/dL.");
                         }
+                        // if they are above the healthy age then it outputs that they are not healthy and tells them to administer insulin
                         if(numBSL>180){
                             displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 80-180 mg/dL. Please administer insulin to lower your blood sugar.");
                         }
+                        // if they are below the healthy age then it outputs that they are not healthy and tells them to eat something
                         if(numBSL<80){
                             displayWhetherHealthy.setText("Your blood sugar level is low. You should eat something in order to raise your blood sugar to somewhere between 80-180 mg/dL");
                         }
@@ -131,7 +149,9 @@ public class Monitor extends AppCompatActivity {
                 }
             }
         });
+
         //SWITCH TWO
+        //ACTIVITY: Before Meal
         scenarioSwitch2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
             @SuppressLint("SetTextI18n")
@@ -203,7 +223,9 @@ public class Monitor extends AppCompatActivity {
                 }
             }
         });
+
         //SWITCH THREE
+        //ACTIVITY: 1-2 hours after eating
         scenarioSwitch3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
             @SuppressLint("SetTextI18n")
@@ -273,8 +295,8 @@ public class Monitor extends AppCompatActivity {
             }
         });
 
-
         //SWITCH FOUR
+        //ACTIVITY: Bedtime
         scenarioSwitch4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
             @SuppressLint("SetTextI18n")
@@ -341,6 +363,7 @@ public class Monitor extends AppCompatActivity {
 
                 }
                 else{
+                    // displays "Select a Scenario" if there is no switch checked
                     displayWhetherHealthy.setText("Select a Scenario");
                 }
             }
