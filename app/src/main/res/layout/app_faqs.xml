@@ -43,26 +43,27 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:layout_margin="20dp"
+                android:layout_margin="13dp"
                 android:layout_gravity="center_vertical|center_horizontal">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Why did we put this off so long"
+                    android:text="How do I use this app?"
 
                     android:layout_gravity="center_horizontal"
                     android:textAlignment="center"
-                    android:textSize="20sp"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua "
+                    android:text="This app is used to help people identify whether or not their current blood sugar levels are healthy for their current scenario. First, input your age and current blood sugar level into the profile section. Then visit the health monitor, and select your scenario. The app will then output whether or not your blood glucose levels are healthy.
+"
                     android:textStyle="normal"
                     android:layout_gravity="center_horizontal"
-                    android:textSize="15sp"
-                    android:layout_marginTop="10dp"/>
+                    android:textSize="13sp"
+                    android:layout_marginTop="5dp"/>
 
             </LinearLayout>
 
@@ -83,26 +84,26 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:layout_margin="20dp"
+                android:layout_margin="13dp"
                 android:layout_gravity="center_vertical|center_horizontal">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Who is the sexy mf that developed this app?"
+                    android:text="Who is this app for?"
 
                     android:layout_gravity="center_horizontal"
                     android:textAlignment="center"
-                    android:textSize="20sp"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua "
+                    android:text="This app is for people who have been diagnosed with prediabetes, type 1 diabetes, and type 2 diabetes."
                     android:textStyle="normal"
                     android:layout_gravity="center_horizontal"
-                    android:textSize="15sp"
-                    android:layout_marginTop="10dp"/>
+                    android:textSize="13sp"
+                    android:layout_marginTop="5dp"/>
 
             </LinearLayout>
 
@@ -123,26 +124,26 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:layout_margin="20dp"
+                android:layout_margin="13dp"
                 android:layout_gravity="center_vertical|center_horizontal">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Why did the chicken cross the road?"
+                    android:text="How does Blood Sugar Pro determine the outputted data in the “Monitor” section?"
 
                     android:layout_gravity="center_horizontal"
                     android:textAlignment="center"
-                    android:textSize="20sp"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua "
+                    android:text="Blood sugar pro uses tables from “singlecare.com” in order to determine healthy blood glucose levels during different scenarios based on age."
                     android:textStyle="normal"
                     android:layout_gravity="center_horizontal"
-                    android:textSize="15sp"
-                    android:layout_marginTop="10dp"/>
+                    android:textSize="13sp"
+                    android:layout_marginTop="5dp"/>
 
             </LinearLayout>
 

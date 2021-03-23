@@ -272,6 +272,8 @@ public class Monitor extends AppCompatActivity {
                 }
             }
         });
+
+
         //SWITCH FOUR
         scenarioSwitch4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 

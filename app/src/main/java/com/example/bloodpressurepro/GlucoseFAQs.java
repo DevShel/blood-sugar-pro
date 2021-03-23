@@ -13,5 +13,6 @@ public class GlucoseFAQs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.blood_sugar_faqs);
+        //basic code that uses blood_sugar_faqs XML file for display
     }
 }

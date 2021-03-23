@@ -28,61 +28,10 @@ public class Profile extends AppCompatActivity {
 
     public static final String SHARED_PREFERENCES = "sharedPreferences";
 
-    //"bslevel" is BLOOD SUGAR LEVEL
+    //"BSL" is BLOOD SUGAR LEVEL
 
     public String age;
     public String BSL;
-
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
-
-        textView = (TextView) findViewById(R.id.text_view);
-        editText = (EditText) findViewById(R.id.edit_text);
-        saveButton = (Button) findViewById(R.id.save_button);
-
-        textView2 = (TextView) findViewById(R.id.text_view2);
-        editText2 = (EditText) findViewById(R.id.edit_text2);
-        saveButton2 = (Button) findViewById(R.id.save_button2);
-
-
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
-        textView.setText(editText.getText().toString());
-
-
-
-
-        saveButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                textView.setText(editText.getText().toString());
-                fixAge();
-                saveAge();
-
-            }
-        });
-
-        saveButton2.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-
-                textView2.setText(editText2.getText().toString());
-                saveBSL();
-
-            }
-        });
-
-        loadAge();
-        updateAge();
-
-        loadBSL();
-        updateBSL();
-
-
-    }
 
     public void saveAge()
     {
@@ -139,6 +88,7 @@ public class Profile extends AppCompatActivity {
         return isValidInteger;
     }
 
+    //sanitized inputs incase user tries to input string
     public void fixAge(){
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
         age = sharedPreferences.getString("age", "0");
@@ -155,6 +105,81 @@ public class Profile extends AppCompatActivity {
             System.out.println("There are no integer conflicts");
 
         }
+
     }
+
+    public void fixBSL(){
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
+        BSL = sharedPreferences.getString("BSL", "0");
+
+        if(!(isInteger(BSL)))
+        {
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("BSL", "0");
+            editor.apply();
+            loadBSL();
+            updateBSL();
+        }
+        else{
+            System.out.println("There are no integer conflicts");
+
+        }
+
+    }
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_profile);
+
+        textView = (TextView) findViewById(R.id.text_view);
+        editText = (EditText) findViewById(R.id.edit_text);
+        saveButton = (Button) findViewById(R.id.save_button);
+
+        textView2 = (TextView) findViewById(R.id.text_view2);
+        editText2 = (EditText) findViewById(R.id.edit_text2);
+        saveButton2 = (Button) findViewById(R.id.save_button2);
+
+
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
+        textView.setText(editText.getText().toString());
+
+
+
+
+        saveButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                textView.setText(editText.getText().toString());
+                saveAge();
+                fixAge();
+
+            }
+        });
+
+        saveButton2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+
+                textView2.setText(editText2.getText().toString());
+                saveBSL();
+                fixBSL();
+
+            }
+        });
+
+        fixAge();
+        loadAge();
+        updateAge();
+
+        loadBSL();
+        updateBSL();
+
+
+    }
+
+
 
 }
