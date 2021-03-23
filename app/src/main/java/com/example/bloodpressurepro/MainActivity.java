@@ -6,6 +6,7 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -20,6 +21,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         card2 = (CardView) findViewById(R.id.monitor_card);
         card3 = (CardView) findViewById(R.id.blood_sugar_faq_card);
         card4 = (CardView) findViewById(R.id.faqs_card);
+
+
 
         card1.setOnClickListener(this);
         card2.setOnClickListener(this);

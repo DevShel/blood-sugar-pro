@@ -77,10 +77,10 @@ public class Monitor extends AppCompatActivity {
 
                     if (numAge<6){
                         if (numBSL<=180 & numBSL>=80){
-                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood pressure between 80-180 mg/dL.");
+                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood sugar between 80-180 mg/dL.");
                         }
                         if(numBSL>180){
-                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 80-180mg/dL. Please administer insulin to lower your blood sugar.");
+                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 80-180 mg/dL. Please administer insulin to lower your blood sugar.");
                         }
                         if(numBSL<80){
                             displayWhetherHealthy.setText("Your blood sugar level is low. You should eat something in order to raise your blood sugar to somewhere between 80-180 mg/dL");
@@ -90,10 +90,10 @@ public class Monitor extends AppCompatActivity {
 
                     if (numAge>=6 & numAge<=12 ){
                         if (numBSL<=180 & numBSL>=80){
-                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood pressure between 80-180 mg/dL.");
+                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood sugar between 80-180 mg/dL.");
                         }
                         if(numBSL>180){
-                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 80-180mg/dL. Please administer insulin to lower your blood sugar.");
+                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 80-180 mg/dL. Please administer insulin to lower your blood sugar.");
                         }
                         if(numBSL<80){
                             displayWhetherHealthy.setText("Your blood sugar level is low. You should eat something in order to raise your blood sugar to somewhere between 80-180 mg/dL");
@@ -102,10 +102,10 @@ public class Monitor extends AppCompatActivity {
                     }
                     if (numAge>=13 & numAge<=19 ){
                         if (numBSL<=150 & numBSL>=70){
-                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood pressure between 70-150 mg/dL.");
+                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood sugar between 70-150 mg/dL.");
                         }
                         if(numBSL>150){
-                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 80-180mg/dL. Please administer insulin to lower your blood sugar.");
+                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 80-180 mg/dL. Please administer insulin to lower your blood sugar.");
                         }
                         if(numBSL<70){
                             displayWhetherHealthy.setText("Your blood sugar level is low. You should eat something in order to raise your blood sugar to somewhere between 70-150 mg/dL");
@@ -115,7 +115,7 @@ public class Monitor extends AppCompatActivity {
 
                     if (numAge>=20 ){
                         if (numBSL<=100){
-                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood pressure below 100 mg/dL.");
+                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood sugar below 100 mg/dL.");
                         }
                         if(numBSL>100){
                             displayWhetherHealthy.setText("Your blood sugar level is too high, it should be less than 100mg/dL. Please administer insulin to lower your blood sugar.");
@@ -138,56 +138,59 @@ public class Monitor extends AppCompatActivity {
             @Override
             // All blood glucose levels during fasting
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(scenarioSwitch1.isChecked()){
+                if(scenarioSwitch2.isChecked()){
                     //shuts off other switches if one switch is enabled
-                    scenarioSwitch2.setChecked(false);
+                    scenarioSwitch1.setChecked(false);
                     scenarioSwitch3.setChecked(false);
                     scenarioSwitch4.setChecked(false);
 
                     if (numAge<6){
-                        if (numBSL<=180 & numBSL>=80){
-                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood pressure between 80-180 mg/dL.");
+                        if (numBSL<=180 & numBSL>=100){
+                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood sugar between 100-180 mg/dL.");
                         }
                         if(numBSL>180){
-                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 80-180mg/dL. Please administer insulin to lower your blood sugar.");
+                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 100-180 mg/dL. Please administer insulin to lower your blood sugar.");
                         }
-                        if(numBSL<80){
-                            displayWhetherHealthy.setText("Your blood sugar level is low. You should eat something in order to raise your blood sugar to somewhere between 80-180 mg/dL");
+                        if(numBSL<100){
+                            displayWhetherHealthy.setText("Your blood sugar level is low. You should eat something in order to raise your blood sugar to somewhere between 100-180 mg/dL");
                         }
 
                     }
 
                     if (numAge>=6 & numAge<=12 ){
-                        if (numBSL<=180 & numBSL>=80){
-                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood pressure between 80-180 mg/dL.");
+                        if (numBSL<=180 & numBSL>=90){
+                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood sugar between 90-180 mg/dL.");
                         }
                         if(numBSL>180){
-                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 80-180mg/dL. Please administer insulin to lower your blood sugar.");
+                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 90-180 mg/dL. Please administer insulin to lower your blood sugar.");
                         }
-                        if(numBSL<80){
-                            displayWhetherHealthy.setText("Your blood sugar level is low. You should eat something in order to raise your blood sugar to somewhere between 80-180 mg/dL");
+                        if(numBSL<90){
+                            displayWhetherHealthy.setText("Your blood sugar level is low. You should eat something in order to raise your blood sugar to somewhere between 90-180 mg/dL");
                         }
 
                     }
                     if (numAge>=13 & numAge<=19 ){
-                        if (numBSL<=150 & numBSL>=70){
-                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood pressure between 70-150 mg/dL.");
+                        if (numBSL<=130 & numBSL>=90){
+                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood sugar between 90-130 mg/dL.");
                         }
-                        if(numBSL>150){
-                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 80-180mg/dL. Please administer insulin to lower your blood sugar.");
+                        if(numBSL>130){
+                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 90-130 mg/dL. Please administer insulin to lower your blood sugar.");
                         }
-                        if(numBSL<70){
-                            displayWhetherHealthy.setText("Your blood sugar level is low. You should eat something in order to raise your blood sugar to somewhere between 70-150 mg/dL");
+                        if(numBSL<90){
+                            displayWhetherHealthy.setText("Your blood sugar level is low. You should eat something in order to raise your blood sugar to somewhere between 90-130 mg/dL");
                         }
 
                     }
 
                     if (numAge>=20 ){
-                        if (numBSL<=100){
-                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood pressure below 100 mg/dL.");
+                        if (numBSL<=130 & numBSL>=70){
+                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood sugar between 70-130 mg/dL.");
                         }
-                        if(numBSL>100){
-                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be less than 100mg/dL. Please administer insulin to lower your blood sugar.");
+                        if(numBSL>130){
+                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 70-130 mg/dL. Please administer insulin to lower your blood sugar.");
+                        }
+                        if(numBSL<70){
+                            displayWhetherHealthy.setText("Your blood sugar level is low. You should eat something in order to raise your blood sugar to somewhere between 70-130 mg/dL");
                         }
 
 
@@ -207,56 +210,56 @@ public class Monitor extends AppCompatActivity {
             @Override
             // All blood glucose levels during fasting
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(scenarioSwitch1.isChecked()){
+                if(scenarioSwitch3.isChecked()){
                     //shuts off other switches if one switch is enabled
+                    scenarioSwitch1.setChecked(false);
                     scenarioSwitch2.setChecked(false);
-                    scenarioSwitch3.setChecked(false);
                     scenarioSwitch4.setChecked(false);
 
                     if (numAge<6){
-                        if (numBSL<=180 & numBSL>=80){
-                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood pressure between 80-180 mg/dL.");
+                        if (numBSL<=190 & numBSL>=150){
+                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood sugar between 150-190 mg/dL.");
                         }
-                        if(numBSL>180){
-                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 80-180mg/dL. Please administer insulin to lower your blood sugar.");
+                        if(numBSL>190){
+                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 150-190 mg/dL. Please administer insulin to lower your blood sugar.");
                         }
-                        if(numBSL<80){
-                            displayWhetherHealthy.setText("Your blood sugar level is low. You should eat something in order to raise your blood sugar to somewhere between 80-180 mg/dL");
+                        if(numBSL<150){
+                            displayWhetherHealthy.setText("Your blood sugar level is low. You should eat something in order to raise your blood sugar to somewhere between 150-190 mg/dL");
                         }
 
                     }
 
                     if (numAge>=6 & numAge<=12 ){
-                        if (numBSL<=180 & numBSL>=80){
-                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood pressure between 80-180 mg/dL.");
+                        if (numBSL<=140 & numBSL>=90){
+                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood sugar between 90-140 mg/dL.");
                         }
-                        if(numBSL>180){
-                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 80-180mg/dL. Please administer insulin to lower your blood sugar.");
+                        if(numBSL>140){
+                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 90-140 mg/dL. Please administer insulin to lower your blood sugar.");
                         }
-                        if(numBSL<80){
-                            displayWhetherHealthy.setText("Your blood sugar level is low. You should eat something in order to raise your blood sugar to somewhere between 80-180 mg/dL");
+                        if(numBSL<90){
+                            displayWhetherHealthy.setText("Your blood sugar level is low. You should eat something in order to raise your blood sugar to somewhere between 90-140 mg/dL");
                         }
 
                     }
                     if (numAge>=13 & numAge<=19 ){
-                        if (numBSL<=150 & numBSL>=70){
-                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood pressure between 70-150 mg/dL.");
+                        if (numBSL<=140 & numBSL>=90){
+                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood sugar between 90-140 mg/dL.");
                         }
-                        if(numBSL>150){
-                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 80-180mg/dL. Please administer insulin to lower your blood sugar.");
+                        if(numBSL>140){
+                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 90-140 mg/dL. Please administer insulin to lower your blood sugar.");
                         }
-                        if(numBSL<70){
-                            displayWhetherHealthy.setText("Your blood sugar level is low. You should eat something in order to raise your blood sugar to somewhere between 70-150 mg/dL");
+                        if(numBSL<90){
+                            displayWhetherHealthy.setText("Your blood sugar level is low. You should eat something in order to raise your blood sugar to somewhere between 90-140 mg/dL");
                         }
 
                     }
 
                     if (numAge>=20 ){
-                        if (numBSL<=100){
-                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood pressure below 100 mg/dL.");
+                        if (numBSL<=180){
+                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood sugar below 180 mg/dL.");
                         }
-                        if(numBSL>100){
-                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be less than 100mg/dL. Please administer insulin to lower your blood sugar.");
+                        if(numBSL>180){
+                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be less than 180 mg/dL. Please administer insulin to lower your blood sugar.");
                         }
 
 
@@ -276,58 +279,60 @@ public class Monitor extends AppCompatActivity {
             @Override
             // All blood glucose levels during fasting
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(scenarioSwitch1.isChecked()){
+                if(scenarioSwitch4.isChecked()){
                     //shuts off other switches if one switch is enabled
+                    scenarioSwitch1.setChecked(false);
                     scenarioSwitch2.setChecked(false);
                     scenarioSwitch3.setChecked(false);
-                    scenarioSwitch4.setChecked(false);
 
                     if (numAge<6){
-                        if (numBSL<=180 & numBSL>=80){
-                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood pressure between 80-180 mg/dL.");
+                        if (numBSL<=110 & numBSL>=200){
+                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood sugar between 110-200 mg/dL.");
                         }
-                        if(numBSL>180){
-                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 80-180mg/dL. Please administer insulin to lower your blood sugar.");
+                        if(numBSL>200){
+                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 110-200 mg/dL. Please administer insulin to lower your blood sugar.");
                         }
-                        if(numBSL<80){
-                            displayWhetherHealthy.setText("Your blood sugar level is low. You should eat something in order to raise your blood sugar to somewhere between 80-180 mg/dL");
+                        if(numBSL<110){
+                            displayWhetherHealthy.setText("Your blood sugar level is low. You should eat something in order to raise your blood sugar to somewhere between 110-200 mg/dL");
                         }
 
                     }
 
                     if (numAge>=6 & numAge<=12 ){
-                        if (numBSL<=180 & numBSL>=80){
-                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood pressure between 80-180 mg/dL.");
+                        if (numBSL<=180 & numBSL>=100){
+                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood sugar between 100-180 mg/dL.");
                         }
                         if(numBSL>180){
-                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 80-180mg/dL. Please administer insulin to lower your blood sugar.");
+                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 100-180 mg/dL. Please administer insulin to lower your blood sugar.");
                         }
-                        if(numBSL<80){
-                            displayWhetherHealthy.setText("Your blood sugar level is low. You should eat something in order to raise your blood sugar to somewhere between 80-180 mg/dL");
+                        if(numBSL<100){
+                            displayWhetherHealthy.setText("Your blood sugar level is low. You should eat something in order to raise your blood sugar to somewhere between 100-180 mg/dL");
                         }
 
                     }
                     if (numAge>=13 & numAge<=19 ){
-                        if (numBSL<=150 & numBSL>=70){
-                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood pressure between 70-150 mg/dL.");
+                        if (numBSL<=150 & numBSL>=90){
+                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood sugar between 90-150 mg/dL.");
                         }
                         if(numBSL>150){
-                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 80-180mg/dL. Please administer insulin to lower your blood sugar.");
+                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 90-150 mg/dL. Please administer insulin to lower your blood sugar.");
                         }
-                        if(numBSL<70){
-                            displayWhetherHealthy.setText("Your blood sugar level is low. You should eat something in order to raise your blood sugar to somewhere between 70-150 mg/dL");
+                        if(numBSL<90){
+                            displayWhetherHealthy.setText("Your blood sugar level is low. You should eat something in order to raise your blood sugar to somewhere between 90-150 mg/dL");
                         }
 
                     }
 
                     if (numAge>=20 ){
-                        if (numBSL<=100){
-                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood pressure below 100 mg/dL.");
+                        if (numBSL<=140 & numBSL>=100){
+                            displayWhetherHealthy.setText("Your blood sugar level is healthy. Based on your scenario, you should try and keep your blood sugar between 100-140 mg/dL.");
                         }
-                        if(numBSL>100){
-                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be less than 100mg/dL. Please administer insulin to lower your blood sugar.");
+                        if(numBSL>140){
+                            displayWhetherHealthy.setText("Your blood sugar level is too high, it should be between 100-140 mg/dL. Please administer insulin to lower your blood sugar.");
                         }
-
+                        if(numBSL<100){
+                            displayWhetherHealthy.setText("Your blood sugar level is low. You should eat something in order to raise your blood sugar to somewhere between 100-140 mg/dL");
+                        }
 
                     }
 

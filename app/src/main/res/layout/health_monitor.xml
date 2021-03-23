@@ -170,7 +170,7 @@
                     android:layout_height="wrap_content"
                     android:text="Select Scenario"
                     android:textStyle="bold"
-                    android:textSize="30sp"
+                    android:textSize="26sp"
                     android:paddingTop="300sp"
                     android:paddingLeft="10sp"
                     android:paddingRight="10sp"/>

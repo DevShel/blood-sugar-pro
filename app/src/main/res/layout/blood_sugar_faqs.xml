@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:layout_margin="20dp"
+                android:layout_margin="13dp"
                 android:layout_gravity="center_vertical|center_horizontal">
                 <TextView
                     android:layout_width="match_parent"
@@ -52,17 +52,18 @@
 
                     android:layout_gravity="center_horizontal"
                     android:textAlignment="center"
-                    android:textSize="20sp"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua "
+                    android:text="Blood sugar level, also known as blood glucose level, is the concentration of glucose in one’s blood. The human body needs sugar in the blood to function properly, however, too much or too little blood can be damaging to one’s health.
+"
                     android:textStyle="normal"
                     android:layout_gravity="center_horizontal"
-                    android:textSize="15sp"
-                    android:layout_marginTop="10dp"/>
+                    android:textSize="13sp"
+                    android:layout_marginTop="5dp"/>
 
             </LinearLayout>
 
@@ -83,26 +84,26 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:layout_margin="20dp"
+                android:layout_margin="13dp"
                 android:layout_gravity="center_vertical|center_horizontal">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="What is Blood Sugar?"
+                    android:text="What is the difference between type 1 diabetes and type 2 diabetes?"
 
                     android:layout_gravity="center_horizontal"
                     android:textAlignment="center"
-                    android:textSize="20sp"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua "
+                    android:text="People with type 1 diabetes are not able to produce insulin at all. People with type 2 diabetes are unable to produce enough natural insulin or their body resists insulin. Insulin is important because it regulates blood sugar levels. "
                     android:textStyle="normal"
                     android:layout_gravity="center_horizontal"
-                    android:textSize="15sp"
-                    android:layout_marginTop="10dp"/>
+                    android:textSize="13sp"
+                    android:layout_marginTop="5dp"/>
 
             </LinearLayout>
 
@@ -123,26 +124,26 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:layout_margin="20dp"
+                android:layout_margin="13dp"
                 android:layout_gravity="center_vertical|center_horizontal">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="What is Blood Sugar?"
+                    android:text="What is Prediabetes?"
 
                     android:layout_gravity="center_horizontal"
                     android:textAlignment="center"
-                    android:textSize="20sp"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua "
+                    android:text="Prediabetes is when one’s blood sugar levels are above healthy levels, but not high enough for a doctor to diagnose diabetes. Prediabetes indicates to one that they might develop type 2 diabetes if they do not change aspects of their lifestyle."
                     android:textStyle="normal"
                     android:layout_gravity="center_horizontal"
-                    android:textSize="15sp"
-                    android:layout_marginTop="10dp"/>
+                    android:textSize="13sp"
+                    android:layout_marginTop="5dp"/>
 
             </LinearLayout>
 

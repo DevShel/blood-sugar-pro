@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.util.Scanner;
+
 public class Profile extends AppCompatActivity {
 
     public TextView textView;
@@ -46,10 +48,18 @@ public class Profile extends AppCompatActivity {
         editText2 = (EditText) findViewById(R.id.edit_text2);
         saveButton2 = (Button) findViewById(R.id.save_button2);
 
+
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
+        textView.setText(editText.getText().toString());
+
+
+
+
         saveButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 textView.setText(editText.getText().toString());
+                fixAge();
                 saveAge();
 
             }
@@ -58,6 +68,7 @@ public class Profile extends AppCompatActivity {
         saveButton2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
+
                 textView2.setText(editText2.getText().toString());
                 saveBSL();
 
@@ -114,5 +125,36 @@ public class Profile extends AppCompatActivity {
         textView2.setText(BSL);
     }
 
+    public  boolean isInteger(String s) {
+        boolean isValidInteger = false;
+        try
+        {
+            Integer.parseInt(s);
+            isValidInteger = true;
+        }
+        catch (NumberFormatException ex)
+        {
+        }
+
+        return isValidInteger;
+    }
+
+    public void fixAge(){
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
+        age = sharedPreferences.getString("age", "0");
+
+        if(!(isInteger(age)))
+        {
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("age", "0");
+            editor.apply();
+            loadAge();
+            updateAge();
+        }
+        else{
+            System.out.println("There are no integer conflicts");
+
+        }
+    }
 
 }
