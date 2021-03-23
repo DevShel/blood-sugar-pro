@@ -58,27 +58,120 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/relativeLayout1"
-                    android:layout_marginTop="30dp">
-
+                    android:layout_marginTop="15dp">
 
                     <TextView
-                        android:id="@+id/age"
+                        android:id="@+id/contextDisplay"
                         android:layout_centerHorizontal="true"
                         android:gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Enter Age in Years"
+                        android:text="Select Scenario"
                         android:textStyle="bold"
                         android:textSize="20sp"/>
 
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
 
+                        android:layout_height="wrap_content">
+                        <Switch
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/scenario1"
+                            android:layout_centerHorizontal="true"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:paddingTop="30dp"
+                            android:textSize="22sp"
+                            android:text="Currently Fasting"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"/>
 
+                    </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+
+                        android:layout_height="wrap_content">
+                        <Switch
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/scenario2"
+                            android:layout_centerHorizontal="true"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:paddingTop="80dp"
+                            android:textSize="22sp"
+                            android:text="Before Meal"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+
+                        android:layout_height="wrap_content">
+                        <Switch
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/scenario3"
+                            android:layout_centerHorizontal="true"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:paddingTop="130dp"
+                            android:textSize="22sp"
+                            android:text="1-2 Hours After Eating"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+
+                        android:layout_height="wrap_content">
+                        <Switch
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/scenario4"
+                            android:layout_centerHorizontal="true"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:paddingTop="180dp"
+                            android:textSize="22sp"
+                            android:text="Bedtime"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"/>
+
+                    </LinearLayout>
 
 
 
                 </RelativeLayout>
 
+                <TextView
+                    android:id="@+id/displayStatus"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Scenario"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:paddingTop="300sp"/>
 
 
             </RelativeLayout>
